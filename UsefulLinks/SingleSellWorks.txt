@@ -1,0 +1,4 @@
+https://medium.com/@yxu71/capture-cell-heterogeneity-in-single-cell-rna-seq-by-topic-modeling-part-one-f404f71deecf
+https://github.com/ImXman/scRNA-seq_topic_modeling
+https://arxiv.org/ftp/arxiv/papers/1704/1704.02007.pdf
+https://www.sciencedirect.com/science/article/abs/pii/S2405471219301991

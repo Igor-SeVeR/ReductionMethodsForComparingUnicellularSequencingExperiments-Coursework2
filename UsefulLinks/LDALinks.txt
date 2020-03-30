@@ -1,0 +1,2 @@
+https://www.machinelearningplus.com/nlp/topic-modeling-gensim-python/
+https://towardsdatascience.com/end-to-end-topic-modeling-in-python-latent-dirichlet-allocation-lda-35ce4ed6b3e0
