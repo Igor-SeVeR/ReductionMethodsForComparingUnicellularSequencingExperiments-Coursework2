@@ -23,20 +23,30 @@ from sklearn.decomposition import LatentDirichletAllocation as LDA
 import pandas as pd
 import matplotlib.pyplot as plot
 import numpy as np
+import pyLDAvis
 
 def IGORMAGIC(file):
-    #z = zipfile.ZipFile("media/" + file, 'r')
-    #z.extractall(path="media/archives")
-    #p = subprocess.Popen("python Scripts/lda_theme_proportion.py media/models/blood_lda_model.jl media/TrainData/blood media/archives media/plots", stdout=subprocess.PIPE, shell=True)
-    #p.wait()
+    z = zipfile.ZipFile("media/" + file, 'r')
+    z.extractall(path="media/archives")
+    p = subprocess.Popen("python Scripts/10x_mtx_cutter.py media/archives media/TrainData/blood", stdout=subprocess.PIPE, shell=True)
+    p.wait()
+    p = subprocess.Popen("python Scripts/lda_theme_proportion.py media/models/blood_lda_model.jl media/TrainData/blood media/archives media/plots", stdout=subprocess.PIPE, shell=True)
+    p.wait()
+    p = subprocess.Popen("python Scripts/database_prepare.py media/DataBase/Human_cell_markers.txt media/models/blood_lda_model.jl media/TrainData/blood media/OutputData",
+        stdout=subprocess.PIPE, shell=True)
+    p.wait()
     return {"Plot by trained model": 'media/plots/plot1.png', "Plot by user data on train model": 'media/plots/plot2.png'}
 
 def IGORMAGIC2(file):
-    #z = zipfile.ZipFile("media/" + file, 'r')
-    #z.extractall(path="media/archives")
-    #p = subprocess.Popen("python Scripts/lda_theme_proportion.py media/models/blood_lda_model.jl media/TrainData/blood media/archives media/plots", stdout=subprocess.PIPE, shell=True)
-    #p.wait()
-    return {"Predicted cells by clusters:": 'media/dataToDownload/test.txt', "Interactive pyLDAvis graph:": 'media/dataToDownload/test.html', "Plot by trained model": 'media/plots/plot1.png', "Plot by user data on train model": 'media/plots/plot2.png'}
+    z = zipfile.ZipFile("media/" + file, 'r')
+    z.extractall(path="media/archives")
+    p = subprocess.Popen("python Scripts/learn_new_model.py users_lda_model media/archives 10 media/models", stdout=subprocess.PIPE, shell=True)
+    p.wait()
+    p = subprocess.Popen("python Scripts/lda_theme_proportion.py media/models/users_lda_model.jl media/archives media/archives media/plots", stdout=subprocess.PIPE, shell=True)
+    p.wait()
+    p = subprocess.Popen("python Scripts/database_prepare.py media/DataBase/Human_cell_markers.txt media/models/users_lda_model.jl media/archives media/OutputData", stdout=subprocess.PIPE, shell=True)
+    p.wait()
+    return {"Predicted cells by clusters:": 'media/OutputData/prediction.txt', "Interactive pyLDAvis graph:": 'media/OutputData/ldavis_prepared.html', "Plot by trained model": 'media/plots/plot1.png'}
 
 
 def saveFile(file, pathToSave):

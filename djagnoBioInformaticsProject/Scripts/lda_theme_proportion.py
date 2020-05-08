@@ -36,7 +36,10 @@ for i in range (lda_model.n_components):
     topics.append(i)
 values = []
 for i in range (lda_model.n_components):
-    values.append(number_of_dominant_topics[i] / float(data_out.shape[0]) * 100)
+    try:
+        values.append(number_of_dominant_topics[i] / float(data_out.shape[0]) * 100)
+    except Exception:
+        values.append(0)
 
 # Dictionary loaded into a DataFrame
 dataFrame = pd.DataFrame(data={"Topic":topics, "Percentage":values })
@@ -60,7 +63,10 @@ for i in range (lda_model.n_components):
     topics.append(i)
 values = []
 for i in range (lda_model.n_components):
-    values.append(number_of_dominant_topics_user[i] / float(data_test.shape[0]) * 100)
+    try:
+        values.append(number_of_dominant_topics_user[i] / float(data_test.shape[0]) * 100)
+    except Exception:
+        values.append(0)
 
 # Dictionary loaded into a DataFrame
 dataFrame = pd.DataFrame(data={"Topic":topics, "Percentage":values })
