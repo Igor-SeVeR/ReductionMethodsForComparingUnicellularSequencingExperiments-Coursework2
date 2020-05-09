@@ -23,6 +23,8 @@ path_to_data = sys.argv[3]
 # Path to data, on which lda model was learnt
 path_to_output_data = sys.argv[4]
 
+file_name = sys.argv[5]
+
 # Numer of genes, to get from each model topic
 number_of_genes_in_topics = 200
 
@@ -94,7 +96,7 @@ for i in range(lda_model.n_components):
         step_answer.append(genes_intersection[sorted_values[j]])
     answer.append(step_answer)
 
-file = open(path_to_output_data + "/prediction.txt", "w")
+file = open(path_to_output_data + "/" + file_name + ".txt", "w")
 file.write("Here are predicted cells by genes significance in each topic." + '\n')
 for i in range(len(answer)):
     file.write("Topic " + str(i) + '\n')
@@ -113,4 +115,4 @@ vectorizer_n = CountVectorizer(lowercase=False, token_pattern=r"(?u)\w+\.\w+|\w+
 count_data = vectorizer_n.fit_transform(data_for_pyLDA)
 
 LDAvis_prepared = sklearn_lda.prepare(lda_model, count_data, vectorizer_n)
-pyLDAvis.save_html(LDAvis_prepared, path_to_output_data + '/ldavis_prepared' + '.html')
+pyLDAvis.save_html(LDAvis_prepared, path_to_output_data + '/' + file_name + '.html')

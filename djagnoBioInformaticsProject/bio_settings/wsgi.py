@@ -1,5 +1,5 @@
 """
-WSGI config for igor project.
+WSGI config for bio_settings project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'igor.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'bio_settings.settings')
 
 application = get_wsgi_application()

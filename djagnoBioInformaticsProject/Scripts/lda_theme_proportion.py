@@ -19,6 +19,7 @@ path_to_model = sys.argv[1]
 path_to_model_data = sys.argv[2]
 path_to_users_data = sys.argv[3]
 path_to_images = sys.argv[4]
+file_name = sys.argv[5]
 
 #Reading LDA model
 lda_model = joblib.load(path_to_model)
@@ -46,7 +47,7 @@ dataFrame = pd.DataFrame(data={"Topic":topics, "Percentage":values })
 
 # Draw a vertical bar chart
 dataFrame.plot.bar(x="Topic", y="Percentage", rot=70, title="")
-plot.savefig(path_to_images + "/plot1.png", dpi = 300)
+plot.savefig(path_to_images + "/" + file_name + "1.png", dpi = 300)
 
 #Reading data
 data = sc.read_10x_mtx(path_to_users_data + '/')
@@ -73,4 +74,4 @@ dataFrame = pd.DataFrame(data={"Topic":topics, "Percentage":values })
 
 # Draw a vertical bar chart
 dataFrame.plot.bar(x="Topic", y="Percentage", rot=70, title="")
-plot.savefig(path_to_images + "/plot2.png", dpi = 300)
+plot.savefig(path_to_images + "/" + file_name + "2.png", dpi = 300)
