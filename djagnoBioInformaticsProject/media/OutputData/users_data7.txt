@@ -1,0 +1,61 @@
+Here are predicted cells by genes significance in each topic.
+Topic 0
+Cell name: Ureteric bud cell; Cell type: Normal cell
+Cell name: Theca interna cell; Cell type: Normal cell
+Cell name: Natural regulatory T (Treg) cell; Cell type: Normal cell
+Cell name: Lake et al.Science.Ex1; Cell type: Normal cell
+Cell name: Pancreatic polypeptide cell; Cell type: Normal cell
+Topic 1
+Cell name: Colony-forming cell; Cell type: Normal cell
+Cell name: Neural stem cell; Cell type: Cancer cell
+Cell name: Type I pneumocyte; Cell type: Normal cell
+Cell name: Basal progenitor cell; Cell type: Normal cell
+Cell name: Luminal progenitor; Cell type: Normal cell
+Topic 2
+Cell name: Colony-forming cell; Cell type: Normal cell
+Cell name: Neural stem cell; Cell type: Cancer cell
+Cell name: Plasmablast; Cell type: Normal cell
+Cell name: Abnormal plasma cell; Cell type: Cancer cell
+Cell name: Common lymphoid progenitor; Cell type: Normal cell
+Topic 3
+Cell name: Peritubular myoid cell; Cell type: Normal cell
+Cell name: Myofibroblast; Cell type: Normal cell
+Cell name: Lymphocyte; Cell type: Cancer cell
+Cell name: Ito cell (hepatic stellate cell); Cell type: Normal cell
+Cell name: Neural cell; Cell type: Normal cell
+Topic 4
+Cell name: Colony-forming cell; Cell type: Normal cell
+Cell name: Neural stem cell; Cell type: Cancer cell
+Cell name: Neuronal progenitor cell; Cell type: Normal cell
+Cell name: Basal progenitor cell; Cell type: Normal cell
+Cell name: Luminal progenitor; Cell type: Normal cell
+Topic 5
+Cell name: Muller glia precursor cell; Cell type: Normal cell
+Cell name: Myometrial stem cell; Cell type: Normal cell
+Cell name: Neuronal progenitor cell; Cell type: Normal cell
+Cell name: Basal progenitor cell; Cell type: Normal cell
+Cell name: Cancer stem cell; Cell type: Normal cell
+Topic 6
+Cell name: Muller glia precursor cell; Cell type: Normal cell
+Cell name: Myeloid-derived suppressor cell; Cell type: Cancer cell
+Cell name: Intestinal epithelial stem cell; Cell type: Normal cell
+Cell name: Basal progenitor cell; Cell type: Normal cell
+Cell name: Cancer stem cell; Cell type: Normal cell
+Topic 7
+Cell name: Neural cell; Cell type: Normal cell
+Cell name: Bipolar cell; Cell type: Normal cell
+Cell name: Liver stem cell; Cell type: Cancer cell
+Cell name: Nucleus pulposus cell; Cell type: Normal cell
+Cell name: M1 macrophage; Cell type: Normal cell
+Topic 8
+Cell name: Dendritic cell; Cell type: Cancer cell
+Cell name: Liver stem cell; Cell type: Normal cell
+Cell name: Liver progenitor cell; Cell type: Normal cell
+Cell name: Pit cell; Cell type: Normal cell
+Cell name: Microglial cell; Cell type: Cancer cell
+Topic 9
+Cell name: Foxp3+IL-17+ T cell; Cell type: Cancer cell
+Cell name: Lake et al.Science.In6; Cell type: Normal cell
+Cell name: Lymphatic endothelial cell; Cell type: Normal cell
+Cell name: Muscle satellite cell; Cell type: Normal cell
+Cell name: Lymphatic endothelial cell; Cell type: Cancer cell
