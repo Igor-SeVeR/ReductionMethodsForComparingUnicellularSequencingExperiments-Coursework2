@@ -6,4 +6,4 @@ pip install django
 
 Запуск:
 python manage.py runserver
-Для запуска фронта просто открыть index.html в папке фронт
+Для запуска фронта открыть index.html в папке фронт
